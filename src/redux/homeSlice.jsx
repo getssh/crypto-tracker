@@ -13,4 +13,38 @@ export const getHome = createAsyncThunk(
       return rejectWithValue({ message: error.message });
     }
   }
-)
+);
+
+const initialState = {
+  isLoading: false,
+  trending: [],
+  error: null,
+}
+
+const homeSlice = createSlice({
+  name: "trend",
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+    .addCase(getHome.pending, () => ({
+      isLoading: true,
+    }))
+    .addCase(getHome.fulfilled, (state, action) => {
+      return {
+        ...state,
+        trending: action.payload.map((item) => ({
+          id: item.item.id,
+          coin_id: item.item.coin_id,
+          name: item.item.name,
+          img: item.item.small,
+        }))
+      }
+    })
+    .addCase(getHome, (action) => ({
+      error: action.payload,
+    }))
+  }
+})
+
+export default homeSlice.reducer;
