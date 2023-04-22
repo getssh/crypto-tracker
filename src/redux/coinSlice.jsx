@@ -14,3 +14,30 @@ export const getCoin = createAsyncThunk(
     }
   }
 )
+
+const initialState = {
+  isLoading: false,
+  coins: {},
+  error: null,
+}
+
+const coinSlice = createSlice({
+  name: "coins",
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+    .addCase(getCoin.pending, (state) => {
+      state.isLoading = true
+    })
+    .addCase(getCoin.fulfilled, (state, action) => ({
+      ...state,
+      coins: action.payload,
+    }))
+    .addCase(getCoin.rejected, (state, action) => {
+      state.error = action.payload;
+    })
+  }
+})
+
+export default coinSlice.reducer;
