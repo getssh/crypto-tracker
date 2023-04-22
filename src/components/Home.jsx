@@ -18,14 +18,14 @@ const Home = () => {
 
   return (
     <div>
-      <h3 className='bg-[#e74886] text-white'>STATS BY TRENDING COIN</h3>
+      <h3 className='bg-[#df4783] text-white'>STATS BY TRENDING COIN</h3>
       {
         trending &&
         <Link to='/coin'>
           <div className='grid grid-cols-2 justify-center home-grid'>
             {
             trending.map((coin, i) => {
-              const evenClass = `flex flex-col p-3 bg-[#e74886]`;
+              const evenClass = `flex flex-col p-3 bg-[#dd4983]`;
               const oddClass = `flex flex-col p-3 bg-[#d04379]`;
               const gridClass = i % 2 == 0 ? evenClass : oddClass;
               return (
