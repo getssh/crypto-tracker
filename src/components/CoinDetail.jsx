@@ -37,13 +37,69 @@ const CoinDetail = () => {
           </svg>  
         </div>
       </div>
-      <div>{coins.market_cap_rank}</div>
-      <div>{coins.coingecko_rank}</div>
-      <div>{coins.community_score}</div>
-      <div>{coins.liquidity_score}</div>
-      <div>{coins["sentiment_votes_up_percentage"]}</div>
-      <div>{coins["sentiment_votes_down_percentage"]}</div>
-      <div>{coins["watchlist_portfolio_users"]}</div>
+      <div className="flex justify-between px-3 bg-[#cf4278] py-6 text-white">
+        <p className="text-lg">Market Cap Rank</p>
+        <div className="flex gap-5">
+          <p>{coins.market_cap_rank}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#ef5390] py-6 text-white">
+        <p className="text-lg">Coingecko Rank</p>
+        <div className="flex gap-5">
+          <p>{coins.coingecko_rank}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#cf4278] py-6 text-white">
+        <p className="text-lg">Community Score</p>
+        <div className="flex gap-5">
+          <p>{coins.community_score}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#ef5390] py-6 text-white">
+        <p className="text-lg">Liquidity Score</p>
+        <div className="flex gap-5">
+          <p>{coins.liquidity_score}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#cf4278] py-6 text-white">
+        <p className="text-lg">Votes Up Percentage</p>
+        <div className="flex gap-5">
+          <p>{coins["sentiment_votes_up_percentage"]}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#ef5390] py-6 text-white">
+        <p className="text-lg">Votes Down Percentage</p>
+        <div className="flex gap-5">
+          <p>{coins["sentiment_votes_down_percentage"]}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
+      <div className="flex justify-between px-3 bg-[#cf4278] py-6 text-white">
+        <p className="text-lg">Portfolio Users</p>
+        <div className="flex gap-5">
+          <p>{coins["watchlist_portfolio_users"]}</p>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 self-end text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>  
+        </div>
+      </div>
     </div>
   )
 }
