@@ -37,6 +37,7 @@ const homeSlice = createSlice({
           id: item.item.id,
           coin_id: item.item.coin_id,
           name: item.item.name,
+          market_cap_rank: item.item.market_cap_rank,
           img: item.item.small,
         }))
       }
