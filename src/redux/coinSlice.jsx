@@ -30,12 +30,13 @@ const coinSlice = createSlice({
     .addCase(getCoin.pending, (state) => {
       state.isLoading = true
     })
-    .addCase(getCoin.fulfilled, (state, action) => ({
-      ...state,
-      coins: action.payload,
-    }))
+    .addCase(getCoin.fulfilled, (state, action) => {
+      state.coins = action.payload;
+      state.isLoading = false;
+    })
     .addCase(getCoin.rejected, (state, action) => {
       state.error = action.payload;
+      state.isLoading = false;
     })
   }
 })
