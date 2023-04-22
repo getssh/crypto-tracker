@@ -8,7 +8,6 @@ const Home = () => {
   const {trending} = useSelector((state) => state.trending);
   const dispatch = useDispatch();
 
-  console.log(trending);
   useEffect(() => {
     if (trending.length > 0) {
       return;

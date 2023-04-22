@@ -13,11 +13,7 @@ const CoinDetail = () => {
     dispatch(getCoin(params.id));
   }, [dispatch]);
 
-  console.log(params);
-  console.log(coins);
-  
   return (
-    
     <div>
       <div className="flex justify-around items-center bg-[#fd5294] text-white py-7">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-14 h-30 text-[#444]">
